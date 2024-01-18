@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_x/home_screen.dart';
+import 'package:get_x/laungage_change.dart';
 import 'package:get_x/screen1.dart';
 import 'package:get_x/screen2.dart';
 
@@ -13,9 +14,17 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('Current Locale: ${Get.locale}');
+
     return GetMaterialApp(
       title: "Learn GetX",
+      fallbackLocale: Locale('en', 'US'),
+      locale: Locale('ur', 'PK'),
+      translations: Languages(),
       theme: ThemeData(primarySwatch: Colors.blue),
+      // ignore: avoid_print
+      // print('Current Locale: ${Get.locale}');
+
       home: Screen2(),
       getPages: [
         GetPage(name: '/', page: () => Screen1()),
