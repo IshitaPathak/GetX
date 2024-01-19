@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_x/home_screen.dart';
+import 'package:get_x/home2.dart';
 
 class Screen1 extends StatefulWidget {
   // var name;
